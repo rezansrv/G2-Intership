@@ -1,18 +1,17 @@
 <template>
-  <Account/>
+
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 
 @Component({
-  name: "IndexPage",
-  components: {Account},
+  name: "account",
+  components: {},
 })
 export default class Account extends Vue {
-  mounted() {
-    console.log('hi')
-  }
+mounted() {
+  console.log('hi')
+}
 }
 </script>
-

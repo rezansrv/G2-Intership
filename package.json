@@ -11,7 +11,9 @@
   "dependencies": {
     "core-js": "^3.25.3",
     "nuxt": "^2.15.8",
+    "typescript": "^5.3.2",
     "vue": "^2.7.10",
+    "vue-property-decorator": "^9.1.2",
     "vue-server-renderer": "^2.7.10",
     "vue-template-compiler": "^2.7.10"
   },
