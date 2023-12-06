@@ -1,5 +1,5 @@
 <template>
-  <Account/>
+  <p>Hiii</p>
 </template>
 
 <script lang="ts">
@@ -7,12 +7,9 @@ import { Component, Vue } from 'vue-property-decorator';
 
 @Component({
   name: "IndexPage",
-  components: {Account},
 })
 export default class Account extends Vue {
-  mounted() {
-    console.log('hi')
-  }
+
 }
 </script>
 

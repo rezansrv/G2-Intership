@@ -1,5 +1,7 @@
 <template>
-
+  <div>
+    <p>Hello</p>
+  </div>
 </template>
 
 <script lang="ts">
@@ -9,7 +11,7 @@ import { Component, Vue } from 'vue-property-decorator';
   name: "account",
   components: {},
 })
-export default class Account extends Vue {
+export default class extends Vue {
 mounted() {
   console.log('hi')
 }
