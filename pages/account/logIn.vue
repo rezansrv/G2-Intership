@@ -6,10 +6,10 @@
 
 <script lang="ts">
   import { Component, Vue } from 'vue-property-decorator';
-  import Login from '~/components/account/LogIn.vue';
+  import Login from '~/components/account/logIn.vue';
 
   @Component({
-    name: "Logmin",
+    name: "LogIn",
     components: {
        Login
     },
