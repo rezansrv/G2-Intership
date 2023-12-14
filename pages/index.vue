@@ -8,6 +8,8 @@
   @Component({
     name: "signUp",
     components: {},
+    layout:"defaultLay"
+
 
 
   })
