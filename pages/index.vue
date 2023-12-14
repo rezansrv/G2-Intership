@@ -8,14 +8,12 @@
   <script lang="ts">
   import { Component, Vue } from 'vue-property-decorator';
   import hero from '~/components/landing/hero.vue'
-  import card from '~/components/card/card.vue'
   import courses from '~/components/courses/courses.vue'
 
   @Component({
     name: "signUp",
     components:
       {hero,
-       card,
        courses
       },
     layout:"defaultLay"

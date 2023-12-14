@@ -1,6 +1,6 @@
 <template>
   <main>
-    <h1 class="mt-[150px] mb-[20px] flex justify-center text-[22px] font-medium">مجموعه های آموزشی</h1>
+    <h1 class="mt-[64px] mb-[20px] flex justify-center text-[22px] font-medium">مجموعه های آموزشی</h1>
     <div class="mt-[40px] flex flex-wrap gap-5 content-center justify-center   " dir="rtl">
       <div v-for="course in courses" :key="course.id" class="max-w-[300px] bg-white border border-gray-200 rounded-lg shadow" dir="rtl">
         <a :href="course.link">
