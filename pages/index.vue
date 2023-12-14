@@ -1,13 +1,23 @@
 <template>
-  <p>Home</p>
-  </template>
+  <div>
+    <hero/>
+    <courses/>
+  </div>
+</template>
 
   <script lang="ts">
   import { Component, Vue } from 'vue-property-decorator';
+  import hero from '~/components/landing/hero.vue'
+  import card from '~/components/card/card.vue'
+  import courses from '~/components/courses/courses.vue'
 
   @Component({
     name: "signUp",
-    components: {},
+    components:
+      {hero,
+       card,
+       courses
+      },
     layout:"defaultLay"
 
 

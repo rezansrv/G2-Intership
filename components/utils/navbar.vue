@@ -9,7 +9,7 @@
           <li><a href="#">دوره ها</a></li>
         </ul>
       </div>
-      <button class="bg-primary text-white rounded-full items-center h-[40px] w-[110px]">ورود | ثبت نام</button>
+      <button class="bg-primary font-medium text-white rounded-full items-center h-[40px] w-[110px]">ورود | ثبت نام</button>
     </nav>
   </header>
 </template>
