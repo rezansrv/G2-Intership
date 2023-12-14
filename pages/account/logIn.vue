@@ -20,7 +20,6 @@
 
     mounted(){
       console.log('base:',process.env.BASE_URL)
-
     }
 
   }

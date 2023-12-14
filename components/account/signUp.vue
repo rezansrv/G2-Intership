@@ -94,8 +94,6 @@ export default class Signup extends Vue {
   };
 
 
-
-
   console.log(registrationData)
   console.log(this.user.password == this.user.repeated)
   if(this.user.password !== this.user.repeated){

@@ -1,34 +1,36 @@
 <!-- layouts/DefaultWithBackground.vue -->
 <template>
   <div class="default-layout">
-    <div class="background"></div>
+    <navbar/>
     <nuxt />
+    <footerApp/>
   </div>
 </template>
 
-<script>
-export default {
-  name: 'DefaultWithBackground',
-};
+
+
+<script lang="ts">
+import Vue from 'vue';
+import Component from 'vue-class-component';
+import navbar from "~/components/utils/navbar.vue";
+import footerApp from "~/components/utils/footerApp.vue";
+
+@Component({
+  name: "def",
+  components: {
+    navbar,
+    footerApp,
+
+  },
+  layout:"account"
+
+})
+export default class layout extends Vue {
+
+}
+
 </script>
 
 <style scoped>
-.default-layout {
-  position: relative;
-  min-height: 100vh;
-  overflow: hidden;
-}
 
-.background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-color: aqua;
-  background-position: center center;
-  filter: blur(8px); /* تعیین میزان blur موردنظر */
-  z-index: -1;
-}
 </style>
