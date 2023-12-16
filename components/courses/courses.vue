@@ -24,7 +24,7 @@ interface Course {
   },
 })
 export default class Courses extends Vue {
-  private courses: Course[] = [];
+  public courses: Course[] = [];
 
   mounted() {
     this.fetchCourses();

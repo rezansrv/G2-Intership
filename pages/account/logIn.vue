@@ -8,6 +8,7 @@
   import { Component, Vue } from 'vue-property-decorator';
   import Login from '~/components/account/logIn.vue';
 
+
   @Component({
     name: "LogIn",
     components: {

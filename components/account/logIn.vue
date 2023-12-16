@@ -59,6 +59,7 @@
 import Vue from 'vue';
 import Component from 'vue-class-component';
 import axios from 'axios';
+import Swal from 'sweetalert2';
 
 @Component
 export default class Login extends Vue {
@@ -100,11 +101,28 @@ export default class Login extends Vue {
       console.log('len',response.data.length>0)
       if (response.data.length>0) {
         this.loginSuccess = true;
-        localStorage.setItem("isLogin", "true");
-
+        const loggedInUser = response.data[0];
+        const userName = `${loggedInUser.fname} ${loggedInUser.lname}`;
+        localStorage.setItem('isLogin', 'true');
+        localStorage.setItem('userName', userName);
+          Swal.fire({
+              position: "center",
+              icon: "success",
+              title: "ورود موفقیت‌آمیز بود",
+              showConfirmButton: false,
+              timer: 1500
+          });
          this.$router.replace("/");
       } else {
         this.loginSuccess = false;
+          Swal.fire({
+              position: "center",
+              icon: "error",
+              title: "اطلاعات ورود نادرست است",
+              showConfirmButton: false,
+              timer: 1500
+          });
+
       }
     })
     .catch((error) => {
