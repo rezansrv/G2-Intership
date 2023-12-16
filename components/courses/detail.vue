@@ -1,6 +1,7 @@
 <template>
-  <main dir="rtl" class="mb-[64px] mt-[44px]">
+  <main dir="rtl" class="mb-[64px] mt-[44px] p-5">
     <div v-if="Object.keys(product).length" class="max-w-screen-lg mx-auto p-4">
+      <div class="border-t-[3px] border-solid  border-Secondary  w-[115px] mb-[10px]"> </div>
       <h1 class="text-3xl font-bold mb-4">دوره {{ product.title }}</h1>
       <div class="flex justify-center mb-2">
         <img :src="product.img" alt="Product Image" class="mb-6  w-[300px]">

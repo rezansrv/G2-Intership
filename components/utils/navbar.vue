@@ -1,11 +1,11 @@
 <template>
-  <header dir="rtl" class="flex justify-center p-2">
+  <header dir="rtl" class="flex justify-center p-3  sm:p-0  bg-[#fffbff]">
     <nav class="flex justify-between flex-row items-center h-[100px] w-[1280px]">
-      <div class="hidden md:flex gap-10">
+      <div class="flex gap-8 justify-center">
         <nuxt-link to="/">
           <img src="https://g2internship.com/_nuxt/img/Logo.2b62930.svg" alt="logo">
         </nuxt-link>
-        <ul class="flex items-center gap-7 text-[17px] font-medium">
+        <ul class="hidden md:flex gap-7 items-center md:gap-10 text-[17px] font-medium">
           <nuxt-link to="/">خانه</nuxt-link>
           <nuxt-link to="aboutus">درباره ما</nuxt-link>
           <nuxt-link to="courses">دوره ها</nuxt-link>
@@ -15,7 +15,7 @@
       <!-- Hamburger menu for mobile screens -->
       <div class="md:hidden">
         <button @click="toggleMobileMenu" class="text-primary">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" style="transform: scaleX(-1);">
             <path d="M4 6h16M4 12h16m-7 6h7"></path>
           </svg>
         </button>
@@ -39,13 +39,18 @@
       </div>
 
       <!-- Mobile menu -->
-      <div v-if="showMobileMenu" class="md:hidden">
-        <div class="flex flex-col items-end gap-4 text-[17px] font-medium">
+      <div v-if="showMobileMenu" class="md:hidden absolute bg-[#fcb9a9] left-2 top-[85px] z-10 ">
+        <div class="flex flex-col items-end gap-4 black p-5 text-[17px] mt-[10px] font-medium">
           <nuxt-link to="/" @click="toggleMobileMenu">خانه</nuxt-link>
           <nuxt-link to="/aboutus" @click="toggleMobileMenu">درباره ما</nuxt-link>
           <nuxt-link to="/courses" @click="toggleMobileMenu">دوره ها</nuxt-link>
           <nuxt-link to="/account/login" v-if="!isLogin" @click="toggleMobileMenu">ورود | ثبت نام</nuxt-link>
           <button v-if="isLogin" @click="logout">خروج از حساب</button>
+          <button class="text-red-600" @click="toggleMobileMenu">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
         </div>
       </div>
     </nav>
@@ -84,6 +89,7 @@ export default class Navbar extends Vue {
   toggleMobileMenu() {
     this.showMobileMenu = !this.showMobileMenu;
   }
+
 }
 </script>
 

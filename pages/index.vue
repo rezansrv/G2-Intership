@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="animate__animated animate__fadeIn animate__delay 0.3s">
     <hero/>
-    <courses id="scrollTarget"/>
+    <courses/>
   </div>
 </template>
 

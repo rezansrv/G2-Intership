@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="animate__animated animate__zoomIn animate__delay 0.3s">
     <courses/>
   </div>
 </template>
