@@ -1,18 +1,19 @@
 <template>
   <div>
-    <courses/>
+    <aboutus/>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import courses from '~/components/courses/courses.vue'
+import aboutus from '~/components/aboutus/aboutus.vue'
+
 
 @Component({
-  name: "course",
+  name: "signUp",
   components:
     {
-      courses
+      aboutus
     },
   layout:"defaultLay"
 

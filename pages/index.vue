@@ -1,7 +1,7 @@
 <template>
   <div>
     <hero/>
-    <courses/>
+    <courses id="scrollTarget"/>
   </div>
 </template>
 

@@ -70,6 +70,7 @@
 import Vue from 'vue';
 import Component from 'vue-class-component';
 import axios from 'axios';
+import Swal from "sweetalert2";
 
 @Component
 export default class Signup extends Vue {
@@ -110,6 +111,13 @@ this.err=true
     console.log(response);
     if (response.status === 201) {
       this.SignupSuccess = true;
+      Swal.fire({
+        position: "center",
+        icon: "success",
+        title: "ثبت نام موفقیت‌آمیز بود",
+        showConfirmButton: false,
+        timer: 1500
+      });
       this.$router.replace("/account/login");
     } else {
       this.SignupSuccess = false;

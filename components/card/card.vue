@@ -1,6 +1,6 @@
 <template>
-  <main>
-    <h1 class="mt-[64px] mb-[20px] flex justify-center text-[22px] font-medium">مجموعه های آموزشی</h1>
+  <main id="coursesSection">
+    <h1  class="mt-[30px] p-5 mb-[20px] flex justify-center text-[22px] font-medium">مجموعه های آموزشی</h1>
     <div class="mt-[40px] flex flex-wrap gap-5 content-center justify-center   " dir="rtl">
       <div v-for="course in courses" :key="course.id" class="max-w-[300px] bg-white border border-gray-200 rounded-lg shadow" dir="rtl">
         <a :href="course.link">
@@ -11,12 +11,12 @@
             <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 text-center">{{ course.title }}</h5>
           </a>
           <p class="mb-3 font-normal text-gray-700 text-center">{{ course.content }}</p>
-          <a :href="course.link" class="flex justify-center w-full mt-[25px] items-center content-center px-3 py-2 text-sm font-medium text-center text-white bg-primary rounded-lg hover:bg-Secondary focus:ring-4 focus:outline-none focus:ring-blue-300">
-            بیشتر
-            <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-            </svg>
-          </a>
+          <nuxt-link :to="`/detail?id=${course.id}`" class="flex justify-center w-full mt-[25px]
+                     items-center content-center px-3 py-2 text-sm font-medium text-center text-white bg-primary rounded-lg
+                     hover:bg-Secondary focus:ring-4 focus:outline-none focus:ring-blue-300">      بیشتر      <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+        </svg>
+          </nuxt-link>
         </div>
       </div>
     </div>

@@ -16,6 +16,7 @@
     "axios": "^0.21.4",
     "core-js": "^3.25.3",
     "nuxt": "^2.15.8",
+    "nuxt-sweetalert2": "^1.0.0",
     "sweetalert": "^2.1.2",
     "sweetalert2": "^11.10.1",
     "typescript": "^3.9.5",
