@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="animate__animated animate__fadeIn animate__delay 0.3s">
     <detail/>
   </div>
 </template>
