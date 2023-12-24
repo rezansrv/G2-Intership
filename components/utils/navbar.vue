@@ -1,5 +1,5 @@
 <template>
-  <header dir="rtl" class="flex justify-center p-3  sm:p-0  bg-[#fffbff]">
+  <header dir="rtl" class="flex justify-center p-3  sm:px-[15px]  bg-[#fffbff]">
     <nav class="flex justify-between flex-row items-center h-[100px] w-[1280px]">
       <div class="flex gap-8 justify-center">
         <nuxt-link to="/">
@@ -83,6 +83,7 @@ export default class Navbar extends Vue {
   logout() {
     localStorage.removeItem('isLogin');
     localStorage.removeItem('userName');
+    localStorage.removeItem('courserigester');
     this.$router.replace('/account/login');
   }
 
